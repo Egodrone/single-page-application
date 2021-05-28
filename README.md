@@ -4,15 +4,13 @@
 ### CRUD application  
 
 - Install axios, json server, uuidv4, router dom and bootstrap
-
-
+```
     npm i --save axios
     npm i --save json-server
     npm i --save uuidv4
     npm i react-router-dom --save
     npm install --save bootstrap
-
-
+```
 - create server-api folder:
 
 
