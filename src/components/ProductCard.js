@@ -19,6 +19,7 @@ const ProductCard = (props) => {
                 <div className="no-underline"> <label className="font-weight-bold">{price}</label> USD</div>
 
             </div>
+
             <i
                 className="trash outline icon"
                 style={{color: "red", marginTop: "-30px", marginLeft: "10px" }}

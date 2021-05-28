@@ -16,17 +16,6 @@ class AddProduct extends React.Component {
         }
     }
 
-    /*
-
-    {
-        name: "book name",
-        price: "637",
-        productDetails: "description",
-        category: "8"
-    }
-
-     */
-
 
     add = (e) => {
         e.preventDefault();
@@ -38,11 +27,7 @@ class AddProduct extends React.Component {
             return;
         }*/
         this.props.addProductHandler(this.state);
-        //this.setState({ name: "", price: ""});
-        //this.setState({ name: "", price: "", productDetails: { ...this.state.productDetails, description: ""}});
         this.setState({ name: "", price: "", productDetails: { ...this.state.productDetails, description: ""}});
-        //this.props.addProductHandler(this.state.productDetails);
-        //this.setState({ name: "", price: ""});
         this.props.history.push("/");
     };
 
@@ -56,8 +41,6 @@ class AddProduct extends React.Component {
         let cat;
 
         if (name === "productDetails.description"){
-            //cat = {...this.state.productDetails.description, [name]: value};
-            //cat = {...this.state, [name]: value};
             cat = {...this.state, [name]: value};
             console.log("If statement --->>> ", cat)
         }
@@ -81,7 +64,6 @@ class AddProduct extends React.Component {
                             name="name"
                             placeholder="Product Name"
                             value={this.state.name}
-                            //onChange={(e) => this.setState({ name: e.target.value })}
                             onChange = {this.handleChange}
                         />
                     </div>
@@ -93,19 +75,15 @@ class AddProduct extends React.Component {
                             placeholder="Price"
                             value={this.state.price}
                             onChange = {this.handleChange}
-                            //onChange={(e) => this.setState({ price: e.target.value })}
                         />
                     </div>
 
                     <div className="field">
                         <input
                             type="text"
-                            // If we change the name to this it works but creating another obj, this one... below
-                            //name="productDetails"
                             name = "productDetails.description"
                             placeholder="Description"
                             value={this.state.productDetails.description}
-                            //value={this.state.productDetails.id}
                             onChange = {this.handleChange}
                         />
                     </div>
@@ -113,7 +91,6 @@ class AddProduct extends React.Component {
                     <div className="field">
                         <input
                             type="number"
-                            //name="category"
                             name="category.id"
                             placeholder="category"
                             value={this.state.category.id}

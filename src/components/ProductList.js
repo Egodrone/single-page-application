@@ -31,6 +31,7 @@ const ProductList = (props) => {
             <div className="celled list">{renderProductList}</div>
         </div>
     );
+
 };
 
 

@@ -22,9 +22,9 @@ const ProductDetail = (props) => {
                     <img src={oca} alt="oca" />
                 </div>
                 <div className="content">
-                    <div className="header"><label className="font-weight-bold">Name: </label> {name}</div>
-                    <div className="description"> <label className="font-weight-bold">Price:</label> {price} USD</div>
-                    <div className="description"><label className="font-weight-bold">Category id:</label> {props.location.state.contact.category.id} </div>
+                    <div className="header"><label className="font-weight-bold"> Name: </label> {name}</div>
+                    <div className="description"> <label className="font-weight-bold"> Price: </label> {price} USD</div>
+                    <div className="description"><label className="font-weight-bold"> Category id: </label> {props.location.state.contact.category.id} </div>
                     <div className="description"><label className="font-weight-bold"> Description:</label> {props.location.state.contact.productDetails.description} </div>
                 </div>
             </div>
