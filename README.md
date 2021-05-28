@@ -12,25 +12,23 @@
     npm install --save bootstrap
 ```
 - create server-api folder:
-
-
+```
     cd server-api
-
+```
 - create package.json:
-
-
+```
     npm init --yes
+```
 
 - add following to the scripts in the package.json
-
-
+```
     "scripts": {
     "start": "json-server -p 3006 -w db.json"
     }
-
+```
 - create database file db.json
 
-
+```
     {
         "contacts": [
             {
@@ -48,11 +46,11 @@
             }
         ]
     }
-
+```
 - start json server
-
-
+```
     server-api>npm start
+```
 
 ### Application
 ![React](src/images/spa.png)
