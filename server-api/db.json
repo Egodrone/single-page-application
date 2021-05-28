@@ -25,21 +25,6 @@
       "category": {
         "id": 2
       }
-    },
-    {
-      "id": "d98fdda9-6435-4940-aa08-400a68477285",
-      "name": "dfd",
-      "price": "545",
-      "productDetails": {
-        "id": "",
-        "description": "",
-        "imageUrl": ""
-      },
-      "category": {
-        "id": ""
-      },
-      "productDetails.description": "g",
-      "category.id": "1"
     }
   ]
 }
