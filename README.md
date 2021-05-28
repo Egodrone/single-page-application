@@ -3,7 +3,8 @@
 
 ### CRUD application  
 
--- Install axios, json server, uuidv4, router dom and bootstrap
+- Install axios, json server, uuidv4, router dom and bootstrap
+
 
     npm i --save axios
     npm i --save json-server
@@ -11,21 +12,25 @@
     npm i react-router-dom --save
     npm install --save bootstrap
 
--- create server-api folder:
+- create server-api folder:
+
 
     cd server-api
 
--- create package.json:
+- create package.json:
+
 
     npm init --yes
 
--- add following to the scripts in the package.json
+- add following to the scripts in the package.json
+
 
     "scripts": {
     "start": "json-server -p 3006 -w db.json"
     }
 
--- create database file db.json
+- create database file db.json
+
 
     {
         "contacts": [
@@ -45,7 +50,8 @@
         ]
     }
 
--- start json server
+- start json server
+
 
     server-api>npm start
 
