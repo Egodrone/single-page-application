@@ -1,0 +1,30 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "JavaScript Book",
+      "price": 60,
+      "productDetails": {
+        "id": 1,
+        "description": "JS is a programming language..",
+        "imageUrl": "jsbook.jpg"
+      },
+      "category": {
+        "id": 2
+      }
+    },
+    {
+      "id": 2,
+      "name": "OCA Book",
+      "price": 90,
+      "productDetails": {
+        "id": 2,
+        "description": "Full coverage of functional programming and all OCA Java Programmer exam objectives OCA, Oracle Certified Associate Java SE 8 Programmer I Study Guide",
+        "imageUrl": "oca.png"
+      },
+      "category": {
+        "id": 2
+      }
+    }
+  ]
+}

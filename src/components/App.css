@@ -1,0 +1,85 @@
+.main {
+  margin-top: 5em;
+}
+
+.item {
+  width: 300px;
+  margin-left: 40px;
+  padding: 15px 0px !important;
+}
+
+*, *::before, *::after {
+  background-color: #e7d4d4;
+}
+
+.center {
+  justify-content: center;
+  padding: 10px;
+}
+
+i.icon {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.right {
+  float: right !important;
+}
+
+.center-div {
+  text-align: center;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.trash {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  background-image: url(../images/trash.png);
+  background-size: 30px;
+}
+
+.edit {
+  height: 30px;
+  width: 30px;
+  background-image: url(../images/edit.png);
+  background-size: 30px;
+}
+
+.mar-btn {
+  margin-left: 50px;
+}
+
+.mar-2 {
+  margin-left: 40px;
+}
+
+.font-weight-bold {
+  font-weight: 800;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.field {
+  margin: 10px;
+}
+
+.content, .img-m1 {
+  padding: 10px;
+}
