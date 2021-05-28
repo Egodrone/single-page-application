@@ -5,15 +5,6 @@ import oca from "../images/oca.jpg";
 
 const ProductDetail = (props) => {
     const { name, price, description } = props.location.state.contact;
-    console.log(props.location.state.contact);
-    console.log(props.location.state.contact.id);
-    console.log(name);
-    console.log(price);
-    console.log(description);
-    console.log(props.location.state.contact.category.id);
-    console.log(props.location.state.contact.productDetails.id);
-    console.log(props.location.state.contact.productDetails.imageUrl);
-
 
     return (
         <div className="main">
