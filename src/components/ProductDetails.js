@@ -4,7 +4,7 @@ import oca from "../images/oca.jpg";
 
 
 const ProductDetail = (props) => {
-    const { name, price, description } = props.location.state.contact;
+    const { id, name, price } = props.location.state.contact;
 
     return (
         <div className="main">
@@ -13,9 +13,11 @@ const ProductDetail = (props) => {
                     <img src={oca} alt="oca" />
                 </div>
                 <div className="content">
+                    <div className="header"><label className="font-weight-bold"> Id: </label> {id}</div>
                     <div className="header"><label className="font-weight-bold"> Name: </label> {name}</div>
                     <div className="description"> <label className="font-weight-bold"> Price: </label> {price} USD</div>
                     <div className="description"><label className="font-weight-bold"> Category id: </label> {props.location.state.contact.category.id} </div>
+                    <div className="description"><label className="font-weight-bold"> Description id: </label> {props.location.state.contact.productDetails.id} </div>
                     <div className="description"><label className="font-weight-bold"> Description:</label> {props.location.state.contact.productDetails.description} </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {uuid} from "uuidv4";
 
 
 class AddProduct extends React.Component {
@@ -19,13 +20,12 @@ class AddProduct extends React.Component {
 
     add = (e) => {
         e.preventDefault();
-        alert(this.state.productDetails.description);
-        //console.log(description);
-        /*
-        if (this.state.name === "" || this.state.price === "" || this.state.productDetails.description) {
+
+        if (this.state.name === "" || this.state.price === "" || this.state.productDetails.description === "" || this.state.category.id === "") {
             alert("You need to fill out all of the fields!");
             return;
-        }*/
+        }
+
         this.props.addProductHandler(this.state);
         this.setState({ name: "", price: "", productDetails: { ...this.state.productDetails, description: ""}});
         this.props.history.push("/");
@@ -35,20 +35,40 @@ class AddProduct extends React.Component {
     handleChange = (e) =>{
         const name = e.target.name;
         const value = e.target.value;
-        console.log("--------------------")
+        console.log("--------------------");
         console.log(name);
         console.log(value);
         let cat;
 
-        if (name === "productDetails.description"){
-            cat = {...this.state, [name]: value};
-            console.log("If statement --->>> ", cat)
+        if (name === "productDetails.description") {
+            cat = {productDetails: { ...this.state.productDetails, description: value}};
+            this.setState({
+                productDetails: {
+                    ...this.state.productDetails,
+                    id: uuid(),
+                    description: value,
+                    imageUrl: ""
+                },
+            });
+            console.log("If statement --->>> ", cat);
+        }
+        else if (name === "category.id") {
+            console.log("Category Id");
+            this.setState({
+                category: {
+                    ...this.state.category,
+                    id: value
+                },
+            });
+        }
+        else {
+            console.log("--------------------");
+            const product = {...this.state, [name]: value};
+            console.log(product);
+            this.setState(product);
         }
 
-        console.log("--------------------")
-        const product = {...this.state, [name]: value};
-        console.log(product);
-        this.setState(product);
+
     }
 
 
@@ -92,7 +112,7 @@ class AddProduct extends React.Component {
                         <input
                             type="number"
                             name="category.id"
-                            placeholder="category"
+                            placeholder="Category Id"
                             value={this.state.category.id}
                             onChange = {this.handleChange}
                         />
